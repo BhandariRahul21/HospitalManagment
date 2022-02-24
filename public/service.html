@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <section class="sub-header">
+     <nav>
+        <a href="index.html" class="href"><img src="images/logo.png" ></a>
+        <div class="nav-links" id="navLinks">
+            <i class="bi bi-x" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="service.html">SERVICES</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+
+            </ul>
+        </div>
+        <i class="bi bi-list" onclick="showMenu()"></i>
+     </nav>
+
+    <h1>Our Services</h1>
+       
+    </section>
+
+
+    <!-- -------Services -->
+
+    <section class="service">
+        <h1>Services we offer</h1>
+        <p>
+            Our Hospital offer a variety of services that mainly cover inpatient procedures that require overnight stays or outpatient operations 
+            that require anesthesia or use of expensive diagnostic and surgical equipment.
+        </p>
+        
+        <div class="row">
+            <div class="service-col">
+                <h3>Emergency Care</h3>
+                <p>Our hospital provide emergency care for traumas and other serious conditions. Emergency room staffs are prepared to provide triage and stabilize patients until 
+                    they can be moved to a room or treated and released.</p>
+
+            </div>
+            <div class="service-col">
+                <h3>Surgery</h3>
+                <p>Our hospital employ surgeons full-time on staff, others make their surgical services available to affiliated doctors. Surgical services include anesthesiology 
+                    services, nursing care, pre- and post-operative rooms, and lab and x-ray technicians.</p>
+                    
+            </div>
+            <div class="service-col">
+                <h3>Specialties</h3>
+                <p>Our hospital provide specialty services such as cardiology wards, cancer centers, pediatric services and rehabilitation units. 
+                   Patients may receive ongoing treatment as outpatients through a hospital-run clinic as well as surgical and rehabilitation services in the same facility</p>
+                    
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- --------Facilities -->
+    <section class="facilities">
+        <h1>Our Facilities</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, omnis!</p>
+        
+        <div class="row">
+            <div class="facilities-col">
+                <img src="images/bathroom.jfif">
+                <h3>Hygienic Washrooms</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni dolores 
+                    eaque esse qui veritatis accusamus possimus in natus doloribus vitae .</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="images/rooms.jfif">
+                <h3>High Quality Ward-Rooms</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni dolores 
+                    eaque esse qui veritatis accusamus possimus in natus doloribus vitae .</p>
+            </div>
+
+            <div class="facilities-col">
+                <img src="images/cafeteria.png">
+                <h3>Healthy And Tasty Food</h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni dolores 
+                    eaque esse qui veritatis accusamus possimus in natus doloribus vitae .</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+
+    <!-- --------Footer------- -->
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We Provide Good Facility World Wide <br> 
+            Pleasure Give Us The Pleasure To Treat You.
+         </p>
+           
+        <div class="icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-linkedin"></i>
+        </div>
+    </section>
+
+
+
+
+   <!-- javascript for toggle menu -->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+</body>
+</html>

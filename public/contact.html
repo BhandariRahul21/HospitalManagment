@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <section class="sub-header">
+     <nav>
+        <a href="index.html" class="href"><img src="images/logo.png" ></a>
+        <div class="nav-links" id="navLinks">
+            <i class="bi bi-x" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="service.html">SERVICES</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+
+            </ul>
+        </div>
+        <i class="bi bi-list" onclick="showMenu()"></i>
+     </nav>
+
+    <h1>Contact Us</h1>
+       
+    </section>
+
+<!-- ----------------Contact Us -->
+     
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d896374.8711760676!2d76.53279689211202!3d28.645812184396306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1644933874949!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                <i class="bi bi-house"></i>
+                <span>
+                    <h5>XYZ Roadd , ABC Building</h5>
+                    <p>Delhi,IN</p>
+                </span>
+                </div>
+
+                <div>
+                    <i class="bi bi-phone"></i>
+                    <span>
+                        <h5>+91 02563204</h5>
+                        <p>Monday to Saturday, 10AM to 6PM</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="bi bi-envelope"></i>
+                    <span>
+                        <h5>lifecare@google.com</h5>
+                        <p>Email us your query</p>
+                    </span>
+                </div>
+            </div>
+            <div class="contact-col">
+                <form action="/create-item" method="POST">
+                    <input name="name"  autocomplete="off" type="text" placeholder="Enter Your Name" required>
+                    <input name="email"  autocomplete="off" type="email" placeholder="Enter Email Address" required>
+                    <input name="subject"  autocomplete="off" type="text" placeholder="Enter Your Subject" required>
+                    <textarea  name="message"  autocomplete="off" rows="8" placeholder="Message" required></textarea>
+                    <button  type="submit" class="hero-btn red-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- --------Footer------- -->
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We Provide Good Facility World Wide <br> 
+            Pleasure Give Us The Pleasure To Treat You.
+         </p>
+           
+        <div class="icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-linkedin"></i>
+        </div>
+    </section>
+
+
+
+
+   <!-- javascript for toggle menu -->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+</body>
+</html>

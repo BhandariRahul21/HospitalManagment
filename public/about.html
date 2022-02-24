@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css" integrity="sha384-ejwKkLla8gPP8t2u0eQyL0Q/4ItcnyveF505U0NIobD/SMsNyXrLti6CWaD0L52l" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <section class="sub-header">
+     <nav>
+        <a href="index.html" class="href"><img src="images/logo.png" ></a>
+        <div class="nav-links" id="navLinks">
+            <i class="bi bi-x" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="service.html">SERVICES</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+
+            </ul>
+        </div>
+        <i class="bi bi-list" onclick="showMenu()"></i>
+     </nav>
+
+    <h1>About Us</h1>
+       
+    </section>
+
+
+    <!-- -------about us -->
+
+    <section class="about-us">
+        <div class="row">
+            <div class="about-col">
+                <h1>We are Worlds Largest Hospital</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet repellendus ratione harum labore accusamus voluptas hic ducimus illum vitae cum expedita aliquid, repellat laboriosam eos natus voluptatibus qui blanditiis excepturi delectus architecto 
+                eligendi? Et officia sunt sint, earum voluptas excepturi.</p>    
+                <a href="blog.html" class="hero-btn red-btn">EXPLORE NOW</a>    
+            </div>
+            <div class="about-col">
+                <img src="images/about.jpg">
+            </div> 
+        </div>
+    
+    </section>
+        
+    <!--Our Doctors  -->
+            
+    <section class="doctor">
+        <h1>Our Doctors</h1>
+        <div class="row">
+            <div class="doctor-col">
+                
+                <img src="images/doctor_01.jpg">
+                <h7>Dr. Andrew Smith</h7>
+                <p>Cardiologist</p>
+            </div>
+                   
+            <div class="doctor-col">
+                
+                <img src="images/doctor_02.jpg">
+                <h7>Dr. Monica</h7>
+                <p>Neurologist</p>
+
+            </div>
+            <div class="doctor-col">
+                
+                <img src="images/doctor_03.jpg">
+                <h7>Dr. Jennifer Winget</h7>
+                <p>Orthologist</p>
+
+            </div>
+            
+            <div class="doctor-col">
+                
+                <img src="images/doctor_04.jpg">
+                <h7>Dr. Rachel</h7>
+                <p>Audiologist</p>
+
+            </div>
+        </div>
+    
+    </section>        
+
+
+
+    
+
+    <!-- --------Footer------- -->
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We Provide Good Facility World Wide <br> 
+            Pleasure Give Us The Pleasure To Treat You.
+         </p>
+           
+        <div class="icons">
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-twitter"></i>
+            <i class="bi bi-linkedin"></i>
+        </div>
+    </section>
+
+
+
+
+   <!-- javascript for toggle menu -->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
+</body>
+</html>
