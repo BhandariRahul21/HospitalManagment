@@ -3,6 +3,11 @@ const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 let app = express()
 
+let port=process.env.PORT
+if(port==null || port==""){
+port=3000
+}
+
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:true}))
 
@@ -42,7 +47,4 @@ app.post('/create-item',function(req,res){
     // res.send("Thanks For Submiting the form");
     res.redirect('/contact.html')
 })
-app.listen(3000,function(){
-    console.log("server is running on 3000")
-})
-
+app.listen(port)
