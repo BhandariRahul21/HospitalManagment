@@ -11,10 +11,12 @@ port=3000
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:true}))
 
-mongoose.connect('mongodb+srv://todoAppUser:qwertyuiop@cluster0.yuair.mongodb.net/Hospital_Mangment?retryWrites=true&w=majority',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+async function go(){
+let client= mongoose.connect('mongodb+srv://todoAppUser:qwertyuiop@cluster0.yuair.mongodb.net/Hospital_Mangment?retryWrites=true&w=majority',{
+    useNewUrlParser: true,useUnifiedTopology: true});
+await client.connect()
+app.listen(port)
+}
 
 const notesSchema ={
     name:String,
@@ -47,4 +49,4 @@ app.post('/create-item',function(req,res){
     // res.send("Thanks For Submiting the form");
     res.redirect('/contact.html')
 })
-app.listen(port)
+
