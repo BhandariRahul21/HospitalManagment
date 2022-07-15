@@ -13,12 +13,11 @@ if (port == null || port== "") {
 }
 
 async function go(){
-    let client =mongoose.connect('mongodb+srv://todoAppUser:qwertyuiop@cluster0.yuair.mongodb.net/Hospital_Mangment?retryWrites=true&w=majority',{
+    mongoose.connect('mongodb+srv://todoAppUser:qwertyuiop@cluster0.yuair.mongodb.net/Hospital_Mangment?retryWrites=true&w=majority',{
         useNewUrlParser: true,
         useUnifiedTopology: true
     });
-    await client.connect();
-    db = client.db()
+    
     app.listen(port)
 }
 
