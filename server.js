@@ -3,22 +3,26 @@ const bodyParser = require("body-parser")
 const mongoose = require("mongoose")
 let app = express()
 
-let port=process.env.PORT
-if(port==null || port==""){
-port=3000
-}
-
 app.use(express.static('public'))
 app.use(bodyParser.urlencoded({extended:true}))
 
+let db
+let port= process.env.PORT
+if (port == null || port== "") {
+  port=3000
+}
 
-mongoose.connect('mongodb+srv://todoAppUser:qwertyuiop@cluster0.yuair.mongodb.net/Hospital_Mangment?retryWrites=true&w=majority',{
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
+async function go(){
+    let client =mongoose.connect('mongodb+srv://todoAppUser:qwertyuiop@cluster0.yuair.mongodb.net/Hospital_Mangment?retryWrites=true&w=majority',{
+        useNewUrlParser: true,
+        useUnifiedTopology: true
+    });
+    await client.connect();
+    db = client.db()
+    app.listen(port)
+}
 
-
-
+go()
 
 const notesSchema ={
     name:String,
@@ -33,7 +37,10 @@ const Note= mongoose.model("Note",notesSchema)
 
 
 app.get("/",function(req,res){
-    res.sendFile(__dirname+"/index.html")
+    db.collection('items').find().toArray(function(err,items){
+        res.sendFile(__dirname+"/index.html")
+    })
+    
 })
 
 
@@ -43,7 +50,7 @@ app.post('/create-item',function(req,res){
     let newBlog = new Note({
         name:req.body.name,
         email:req.body.email,
-        
+        subject:req.body.subject,
         message:req.body.message 
     })
     // console.log(newNote)
@@ -51,4 +58,4 @@ app.post('/create-item',function(req,res){
     // res.send("Thanks For Submiting the form");
     res.redirect('/contact.html')
 })
-app.listen(port)
+
